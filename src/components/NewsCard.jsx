@@ -1,5 +1,6 @@
 import React from "react";
 import { FaEye, FaShareAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NewsCard = ({ singleNews }) => {
   return (
@@ -46,7 +47,9 @@ const NewsCard = ({ singleNews }) => {
 
         {/* Read More Button */}
         <div className="mt-4">
+          <Link to={`/news/${singleNews._id}`}>
           <button className="btn btn-outline btn-primary w-full">Read More</button>
+          </Link>
         </div>
       </div>
     </div>
